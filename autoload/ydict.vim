@@ -26,3 +26,13 @@ function! ydict#GetAvailableCmd()
 
     return ""
 endfunction
+
+function! ydict#GetTransCmd()
+    for cmd in ['trans']
+        if executable(cmd)
+            return cmd
+        endif
+    endfor
+
+    return ""
+endfunction
